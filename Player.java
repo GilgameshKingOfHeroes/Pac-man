@@ -6,7 +6,7 @@ public class Player {
 	
 	// Constructor for creating a player.
 	public Player() {
-		pacmanPicture = EZ.addImage("pacman.png", 32, 32);
+		pacmanPicture = EZ.addImage("pacman2.png", 32, 32);
 		x = 32;
 		y = 32;
 	}
