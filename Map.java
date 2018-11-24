@@ -5,8 +5,6 @@ import java.util.Scanner;
 
 
 public class Map {
-	static EZImage grass;
-	static EZImage dirt;
 	
 	Map() throws java.io.IOException {
 		
@@ -34,10 +32,10 @@ public class Map {
 		
 				switch(ch){
 					case 'R':
-						dirt = EZ.addImage("dirt.png",column*32,row*32);
+						EZ.addImage("dirt.png",column*32,row*32);
 						break;		
 					case 'G':
-						grass = EZ.addImage("grass.png",column*32,row*32);
+						EZ.addImage("grass.png",column*32,row*32);
 						break;
 					default:
 						break;			
