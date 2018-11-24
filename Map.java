@@ -44,6 +44,9 @@ public class Map {
 
 			EZ.refreshScreen();
 		}
+		
+		fileScanner.close();
+		fr.close;
 	}
 
 }
