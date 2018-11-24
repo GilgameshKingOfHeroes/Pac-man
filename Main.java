@@ -1,5 +1,3 @@
-
-
 import java.awt.Color;
 import java.io.FileReader;
 import java.io.IOException;
@@ -39,7 +37,11 @@ public class Main {
 					}
 			}	
 		}
-		fs.close();	
+		fs.close();
+		
+		Ghost g1 = new Ghost(17*32, 32);
+		Ghost g2 = new Ghost(64, 8*32);
+		Ghost g3 = new Ghost(32, 18*32);
 		
 		
 		int playerState = 0;
@@ -48,6 +50,10 @@ public class Main {
 
 		while (playerState == 0) {
 
+			g1.moveDown();
+			g2.moveRight();
+			g3.moveRight();
+			
 			// Steer the Player
 			myPlayer.ControlIt();
 			EZ.refreshScreen();
