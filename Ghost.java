@@ -1,14 +1,16 @@
+
 //Alison Tomooka
-//11.23.18 V.1
+//November 2018
 
 public class Ghost {	//Open Ghost class
 
 	
-	private EZImage picture; //declare private variable "picture" of type EZImage
+	public EZImage picture; //declare private variable "picture" of type EZImage
 	
 	private int x;	//declare private variable "x" of type integer
 	private int y;	//declare private variable "y" of type integer
 	
+
 	
 	//Class Constructor
 	Ghost(int posX, int posY) {
@@ -36,7 +38,7 @@ public class Ghost {	//Open Ghost class
 	//Declare moveUp function
 	public void moveUp() {
 		
-		y -= 10;	//decrease y by 10
+		y -= 1;	//decrease y by 10
 		
 		picture.translateTo(x, y);	//translate picture to new x and y
 		
@@ -46,7 +48,7 @@ public class Ghost {	//Open Ghost class
 	//Declare moveDown function
 	public void moveDown() {
 		
-		y += 10;	//increase y by 10
+		y += 1;	//increase y by 10
 		
 		picture.translateTo(x, y);	//translate picture to new x and y
 	}
@@ -55,7 +57,7 @@ public class Ghost {	//Open Ghost class
 	//Declare moveLeft function
 	public void moveLeft() {
 		
-		x -= 10;	//decrease x by 10
+		x -= 1;	//decrease x by 10
 		
 		picture.translateTo(x, y);	//translate picture to new x and y
 	
@@ -65,7 +67,7 @@ public class Ghost {	//Open Ghost class
 	//Declare moveRight function
 	public void moveRight() {
 		
-		x += 10;	//increase x by 10
+		x += 1;	//increase x by 10
 		
 		picture.translateTo(x, y);	//translate picture to new x and y
 		
@@ -73,14 +75,30 @@ public class Ghost {	//Open Ghost class
 	
 	
 	//Declare hit function
-	public void hit(int posX, int posY) {
+	public void hit(int posX, int posY, Life whatLeft) {
 		
 		x = posX;	//assign value of posX to x
 		y = posY;	//assign value posY to y
 		
 		picture.translateTo(x,y);	//translate picture to new x and y
 		
+		whatLeft.decreaseLives();	//call decreaseLives function from Life class
 	}
-
+	
+	
+	//Declare arrayColumn function
+	//This function gives an approximate relationship between the Ghost's x-coordinate and 2D Array
+	public int arrayColumn() {
+		int column = getX()/32;	//Declare column variable and assign the value of the Ghost's x divided by 32
+		return column;	//return the value of column
+	}
+	
+	
+	//Declare arrayRow function
+	//This function gives an approximate relationship between the Ghost's y-coordinate and 2D Array
+	public int arrayRow() {
+		int row = getY()/32;	//Declare row variable and assign the value of the Ghost's y divided by 32
+		return row;	//return the value of row
+	}
 	
 }	
