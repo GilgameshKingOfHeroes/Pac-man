@@ -1,5 +1,5 @@
 //Alison Tomooka
-//11.23.18 V.1
+//November 2018
 
 import java.awt.Color;	//Import Color
 
@@ -35,6 +35,12 @@ public class Life {	//Open Life class
 		
 		counter.setMsg("NO MORE LIVES");	//change counter message to "NO MORE LIVES"
 		
+	}
+	
+	
+	//Declare howManyLeft function
+	public int howManyLeft() {
+		return count;	//return value of count
 	}
 	
 }
