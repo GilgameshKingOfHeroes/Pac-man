@@ -82,9 +82,10 @@ public class Main {	//Open Main class
 		Ghost g2 = new Ghost(64, 12*32);
 		Ghost g3 = new Ghost(32, 18*32);
 		
-		
+		//Declare variable playerState of type integer with value 0
 		int playerState = 0;
 		
+		//Create myPlayer object of type Player
 		Player myPlayer = new Player();
 
 		while (playerState == 0) {
