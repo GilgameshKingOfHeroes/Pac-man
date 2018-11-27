@@ -10,13 +10,13 @@ public class Player {
 	// Constructor for creating a player.
 	public Player() {
 		pacmanPicture = EZ.addImage("pacman2.png", 32, 32); // assign image to pacmanPicture
-		x = 32;
-		y = 32;
+		x = 32; //assign 32 to variable x
+		y = 32; //assign 32 to variable y
 	}
 
 	// Accessor method to retrieve the position of the player.
 	public int getX() {
-		return x;
+		return x; 
 	}
 
 	public int getY() {
@@ -25,7 +25,7 @@ public class Player {
 
 	// Set the position of the player
 	public void setPosition(int posx, int posy) {
-		x = posx;
+		x = posx; 
 		y = posy;
 		setPlayerImagePosition(x, y);
 	}
@@ -66,7 +66,7 @@ public class Player {
 		} else if (EZInteraction.wasKeyReleased('d') && (walls[(getX()/32)+1][(getY()/32)]!= ck)) {
 			moveRight(PLAYER_SPEED);
 		}
-	]
+	}
 }
 	
 
