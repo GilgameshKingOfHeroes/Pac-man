@@ -15,15 +15,19 @@ import java.io.FileReader;	//Import File Reader
 import java.io.IOException;	//Import io.IOException
 import java.util.Scanner;	//Import Scanner
 
-public class Main {	//Open Main class
-	
-	//Open main program with throws
-	public static void main(String[] args) throws IOException {
 
+//Open Main class
+public class Main {
+	
+	//Open main program that throws IOException
+	public static void main(String[] args) throws IOException {
+		
+		//Initialize EZ with 640x640 screen
+		//Set background color to black
 		EZ.initialize(20*32, 20*32);
 		EZ.setBackgroundColor(new Color(0, 0,0)); 
 		
-		Map map = new Map();
+		Map map = new Map();	//Create map object of type Map
 		
 		Life lives = new Life();	//Create lives object of type Life
 		
