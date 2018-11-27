@@ -1,3 +1,6 @@
+//Tristan Yousuf-Leo
+//November 2018
+
 import java.awt.Color; //Imports the Color module from java.awt
 import java.io.FileReader; //Imports the FileReader module from java.io
 import java.io.InputStreamReader; //Imports the InputStreamReader module from java.io
