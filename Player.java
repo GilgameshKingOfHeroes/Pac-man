@@ -56,17 +56,17 @@ public class Player {
 	}
 
 	// Keyboard controls for moving the player.
-	public void ControlIt() {
-		if (EZInteraction.isKeyDown('w')) {
+	public void ControlIt(String [][] walls, String ck) {
+		if (EZInteraction.wasKeyReleased('w') && (walls[(getX()/32)][(getY()/32)-1]!= ck)) {
 			moveUp(PLAYER_SPEED);
-		} else if (EZInteraction.isKeyDown('a')) {
+		} else if (EZInteraction.wasKeyReleased('a') && (walls[(getX()/32)-1][(getY()/32)]!= ck)) {
 			moveLeft(PLAYER_SPEED);
-		} else if (EZInteraction.isKeyDown('s')) {
+		} else if (EZInteraction.wasKeyReleased('s') && (walls[(getX()/32)][(getY()/32)+1]!= ck)) {
 			moveDown(PLAYER_SPEED);
-		} else if (EZInteraction.isKeyDown('d')) {
+		} else if (EZInteraction.wasKeyReleased('d') && (walls[(getX()/32)+1][(getY()/32)]!= ck)) {
 			moveRight(PLAYER_SPEED);
 		}
-	}
+	]
 }
 	
 
