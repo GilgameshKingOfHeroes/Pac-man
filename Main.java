@@ -82,10 +82,9 @@ public class Main {	//Open Main class
 		Ghost g2 = new Ghost(64, 12*32);
 		Ghost g3 = new Ghost(32, 18*32);
 		
-		//Declare variable playerState of type integer with value 0
+		
 		int playerState = 0;
 		
-		//Create myPlayer object of type Player
 		Player myPlayer = new Player();
 
 		while (playerState == 0) {
@@ -131,6 +130,7 @@ public class Main {	//Open Main class
 			}
 			if (lives.howManyLeft() == 0) {
 				lives.dead();
+				break;
 			}
 			
 			//If myPlayer is inside Ghosts' image then call hit function
@@ -149,6 +149,7 @@ public class Main {	//Open Main class
 			}
 			if (lives.howManyLeft() == 0) {
 				lives.dead();
+				break;
 			}
 			
 			// Steer the Player
@@ -156,7 +157,7 @@ public class Main {	//Open Main class
 			
 			
 			//For the entire myPoints 2D array, check if myPlayer is within the Points' image
-			//If inside then call increase count by 1, "collected function, and update counter message with new value
+			//If inside then hide image, increase count by 1, and update counter message with new count value
 			for(int column = 1; column < width; column++){
 				for (int row = 1; row < height; row++){
 
@@ -168,14 +169,14 @@ public class Main {	//Open Main class
 						
 						counter.setMsg("POINT: " + count);
 					}
-					
-					//End game if all points are collected and count equals 230
-					if (count == 230) {
-						break;
-					}
-					
 				}	
 			}
+			
+			//End game if all points are collected and count equals 230
+			if (count == 230) {
+				break;
+			}
+			
 			
 			//Refresh the screen
 			EZ.refreshScreen();
