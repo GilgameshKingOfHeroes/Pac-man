@@ -5,7 +5,7 @@
 public class Player {
 	private EZImage pacmanPicture; // declare private variable "pacmanPicture" of type EZImage
 	private int x, y; // declare private variable "x,y" of type int
-	static final int PLAYER_SPEED = 2; // declare static final of type int to player speed
+	static final int PLAYER_SPEED = 32; // declare static final of type int to player speed
 	
 	// Constructor for creating a player.
 	public Player() {
