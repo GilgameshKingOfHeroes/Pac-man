@@ -25,7 +25,7 @@ public class Point { 	//Open Point class
 
 	//Declare collected function
 	public void collected() {
-			
+			picture.translateTo(-300,-300); //move picture
 			picture.hide();	//hide picture
 			
 	}
