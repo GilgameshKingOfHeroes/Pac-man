@@ -156,15 +156,16 @@ public class Main {	//Open Main class
 			
 			
 			//For the entire myPoints 2D array, check if myPlayer is within the Points' image
-			//If inside then hide image, increase count by 1, and update counter message with new count value
+			//If inside then call increase count by 1, "collected function, and update counter message with new value
 			for(int column = 1; column < width; column++){
 				for (int row = 1; row < height; row++){
 
 					if (myPoints[column][row].picture.isPointInElement(myPlayer.getX(), myPlayer.getY())) {
 						
-						myPoints[column][row].picture.hide();
-						
 						count++;
+						
+						myPoints[column][row].collected();
+						
 						counter.setMsg("POINT: " + count);
 					}
 					
