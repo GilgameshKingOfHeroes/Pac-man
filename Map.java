@@ -46,7 +46,7 @@ public class Map { //Creates a public class called Map
 		}
 		
 		fileScanner.close(); //Closes the file scanner
-		fr.close; //Closes the file reader
+		fr.close(); //Closes the file reader
 	}
 
 }
