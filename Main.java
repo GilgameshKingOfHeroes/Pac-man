@@ -128,31 +128,34 @@ public class Main {
 			
 			
 			//If myPlayer is inside Ghosts' image then call hit function
-			//If number of lives is now zero, call dead function
+			//If number of lives is now zero, call dead function and display gameover image
 			if (g1.picture.isPointInElement(myPlayer.getX(), myPlayer.getY())) {
 				g1.hit(17*32, 32, lives);
 			}
 			if (lives.howManyLeft() == 0) {
+				EZ.addImage("gameover3.jpg", 320, 320);
 				lives.dead();
 				break;
 			}
 			
 			//If myPlayer is inside Ghosts' image then call hit function
-			//If number of lives is now zero, call dead function
+			//If number of lives is now zero, call dead function and display gameover image
 			if (g2.picture.isPointInElement(myPlayer.getX(), myPlayer.getY())) {
 				g2.hit(64, 12*32, lives);
 			}
 			if (lives.howManyLeft() == 0) {
+				EZ.addImage("gameover3.jpg", 320, 320);
 				lives.dead();
 			}
 			
 			//If myPlayer is inside Ghosts' image then call hit function
-			//If number of lives is now zero, call dead function
+			//If number of lives is now zero, call dead function and display gameover image
 			if (g3.picture.isPointInElement(myPlayer.getX(), myPlayer.getY())) {
 				g3.hit(32, 18*32, lives);
 			}
 			if (lives.howManyLeft() == 0) {
 				lives.dead();
+				EZ.addImage("gameover3.jpg", 320, 320);
 				break;
 			}
 			
@@ -177,7 +180,9 @@ public class Main {
 			}
 			
 			//End game if all points are collected and count equals 230
+			//Display win image
 			if (count == 230) {
+				EZ.addImage("win.jpg", 320, 320);
 				break;
 			}
 			
@@ -188,4 +193,3 @@ public class Main {
 	}
 
 }
-
