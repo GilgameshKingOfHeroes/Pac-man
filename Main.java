@@ -152,7 +152,7 @@ public class Main {	//Open Main class
 			}
 			
 			// Steer the Player
-			myPlayer.ControlIt();
+			myPlayer.ControlIt(mazeWalls, check);
 			
 			
 			//For the entire myPoints 2D array, check if myPlayer is within the Points' image
